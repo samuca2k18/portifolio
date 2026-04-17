@@ -1,1505 +1,877 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Samuel Nikolas — Backend & Full Stack Developer</title>
-  <meta name="description" content="Portfólio de Samuel Nikolas: Desenvolvedor Full Stack especializado em Java/Spring, Python/FastAPI, React/TypeScript e Flutter. Projetos em produção: Market Albion, Soul Surf, Piano Princess, Aissis." />
-  <meta name="keywords" content="Samuel Nikolas, desenvolvedor full stack, Java Spring, Python FastAPI, React TypeScript, Flutter, AWS, Supabase, portfólio" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%237c5cff'/%3E%3Cstop offset='100%25' style='stop-color:%2322c55e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='6' fill='url(%23g)'/%3E%3Ctext x='16' y='22' font-size='18' text-anchor='middle' fill='white' font-family='Arial'%3ESN%3C/text%3E%3C/svg%3E" />
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Samuel Nikolas — Backend & Full Stack Developer" />
-  <meta property="og:description" content="Desenvolvedor Full Stack especializado em Java/Spring, Python/FastAPI, React/TypeScript. Projetos em produção: Market Albion, Soul Surf, Piano Princess." />
-  <meta property="og:locale" content="pt_BR" />
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Samuel Nikolas — Backend & Full Stack Developer" />
-  <meta name="twitter:description" content="Desenvolvedor Full Stack | Java, Python, React, Flutter | Projetos em produção" />
-  
-  <!-- Fonts, Icons & Animations -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Samuel Nikolas | Backend & Full Stack Developer</title>
+  <meta name="description" content="Portfólio de Samuel Nikolas com projetos full-stack em produção e foco forte em backend.">
+  <meta property="og:title" content="Samuel Nikolas | Backend & Full Stack Developer">
+  <meta property="og:description" content="Albion Market API, Soul Surf, IAssis CRM e mais projetos em produção.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0a0e27;
-      --bg-secondary: #0f1426;
-      --text: #e8eefc;
-      --text-muted: #a6b1d0;
-      --brand: #7c5cff;
-      --brand-light: #9d7eff;
-      --accent: #22c55e;
-      --accent-light: #4ade80;
-      --border: rgba(255, 255, 255, 0.08);
-      --shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
-      --shadow-sm: 0 8px 16px rgba(0, 0, 0, 0.2);
-      --radius: 20px;
-      --radius-sm: 12px;
-      --max-width: 1200px;
-      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --bg: #071019;
+      --bg-soft: #0f1f2fcc;
+      --card: #13283bcc;
+      --text: #e9f5ff;
+      --muted: #abc4d9;
+      --line: #3f607a;
+      --accent: #ff6b3d;
+      --accent-2: #17c7a5;
+      --shadow: 0 24px 44px rgba(2, 13, 22, 0.38);
+      --max: 1140px;
     }
 
-    * {
-      box-sizing: border-box;
+    html[data-theme="light"] {
+      --bg: #edf3f8;
+      --bg-soft: #ffffffcc;
+      --card: #ffffffde;
+      --text: #10273b;
+      --muted: #4e6a80;
+      --line: #aec2d2;
+      --accent: #dc5126;
+      --accent-2: #008f7a;
+      --shadow: 0 16px 30px rgba(32, 69, 95, 0.18);
     }
 
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: "Space Grotesk", sans-serif;
       color: var(--text);
-      background: 
-        radial-gradient(800px 600px at 10% 15%, rgba(124, 92, 255, 0.25), transparent 60%),
-        radial-gradient(900px 550px at 90% 25%, rgba(34, 197, 94, 0.15), transparent 60%),
-        radial-gradient(600px 400px at 50% 95%, rgba(56, 189, 248, 0.1), transparent 60%),
+      background:
+        radial-gradient(900px 460px at 12% 8%, rgba(23, 199, 165, 0.16), transparent 70%),
+        radial-gradient(860px 460px at 92% 6%, rgba(255, 107, 61, 0.18), transparent 72%),
         var(--bg);
-      background-attachment: fixed;
+      min-height: 100vh;
       line-height: 1.6;
       overflow-x: hidden;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-      transition: var(--transition);
+    .bg-grid {
+      position: fixed; inset: 0; pointer-events: none; z-index: -1;
+      background-image:
+        linear-gradient(to right, rgba(125, 161, 188, 0.08) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(125, 161, 188, 0.08) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: radial-gradient(circle at center, black 18%, transparent 76%);
     }
 
-    .container {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+    .wrap { width: min(var(--max), calc(100% - 2rem)); margin: 0 auto; }
+    a { color: inherit; text-decoration: none; }
 
-    /* NAVBAR */
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      backdrop-filter: blur(12px);
-      background: rgba(10, 14, 39, 0.75);
-      border-bottom: 1px solid var(--border);
-      animation: slideDown 0.5s ease-out;
+    header {
+      position: sticky; top: 0; z-index: 30;
+      backdrop-filter: blur(10px);
+      background: rgba(6, 14, 22, 0.82);
+      border-bottom: 1px solid transparent;
+      transition: border-color .2s ease;
     }
+    html[data-theme="light"] header { background: rgba(237, 243, 248, 0.86); }
+    header.scrolled { border-bottom-color: var(--line); }
 
-    @keyframes slideDown {
-      from {
-        transform: translateY(-100%);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    .navbar-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 24px;
-      margin: 0 auto;
-      max-width: var(--max-width);
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      font-size: 18px;
-      letter-spacing: -0.5px;
-      background: linear-gradient(135deg, var(--brand), var(--accent));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--brand), var(--accent));
-      animation: pulse 2s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.6; }
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 8px;
-      align-items: center;
+    .top {
+      min-height: 74px;
+      display: flex; align-items: center; justify-content: space-between; gap: .8rem;
       flex-wrap: wrap;
     }
-
+    .brand {
+      display: flex; align-items: center; gap: .5rem; font-weight: 800; letter-spacing: .02em; font-size: .95rem;
+    }
+    .brand span:first-child {
+      width: 10px; height: 10px; border-radius: 999px;
+      background: linear-gradient(120deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 0 4px rgba(255, 107, 61, 0.18);
+    }
+    nav { display: flex; gap: .35rem; flex-wrap: wrap; }
     .nav-link {
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text-muted);
-      border: 1px solid var(--border);
-      transition: var(--transition);
+      font-size: .78rem; font-weight: 700; color: var(--muted);
+      padding: .35rem .62rem; border: 1px solid transparent; border-radius: 999px;
     }
-
-    .nav-link:hover {
+    .nav-link:hover { color: var(--text); border-color: var(--line); background: rgba(255, 255, 255, 0.08); }
+    .top-actions { display: flex; gap: .4rem; }
+    .top-btn {
+      font: 600 .72rem "JetBrains Mono", monospace;
       color: var(--text);
-      border-color: var(--brand);
-      background: rgba(124, 92, 255, 0.1);
-    }
-
-    /* HERO SECTION */
-    .hero {
-      margin-top: 80px;
-      padding: 80px 0 100px;
-      position: relative;
-    }
-
-    .hero-content {
-      display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      gap: 48px;
-      align-items: center;
-    }
-
-    @media (max-width: 1000px) {
-      .hero-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-    }
-
-    h1 {
-      font-size: 56px;
-      line-height: 1.15;
-      margin: 0 0 20px 0;
-      font-weight: 800;
-      letter-spacing: -1px;
-      background: linear-gradient(to right, var(--text) 0%, var(--brand) 25%, var(--accent) 50%, var(--brand) 75%, var(--text) 100%);
-      background-size: 200% auto;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: fadeInUp 0.6s ease-out, shine 5s linear infinite;
-    }
-
-    @keyframes shine {
-      to {
-        background-position: 200% center;
-      }
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 42px;
-      }
-    }
-
-    .subtitle {
-      font-size: 18px;
-      color: var(--text-muted);
-      margin: 0 0 24px 0;
-      line-height: 1.7;
-      animation: fadeInUp 0.6s ease-out 0.1s backwards;
-    }
-
-    .cta-group {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin: 32px 0;
-      animation: fadeInUp 0.6s ease-out 0.2s backwards;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 14px 28px;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 14px;
-      border: 1.5px solid;
-      cursor: pointer;
-      transition: var(--transition);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .btn::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: inherit;
-      opacity: 0.2;
-      transition: var(--transition);
-      z-index: -1;
-    }
-
-    .btn:hover::before {
-      left: 0;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--brand), var(--brand-light));
-      border-color: var(--brand);
-      color: white;
-      box-shadow: 0 8px 24px rgba(124, 92, 255, 0.3);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 32px rgba(124, 92, 255, 0.4);
-    }
-
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.05);
-      border-color: var(--border);
-      color: var(--text);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(124, 92, 255, 0.15);
-      border-color: var(--brand);
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 520px) {
-      .stats {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .stat-card {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 20px;
-      backdrop-filter: blur(10px);
-      transition: var(--transition);
-    }
-
-    .stat-card:hover {
-      background: rgba(124, 92, 255, 0.1);
-      border-color: var(--brand);
-      transform: translateY(-4px);
-    }
-
-    .stat-number {
-      font-size: 28px;
-      font-weight: 800;
-      background: linear-gradient(to right, var(--brand) 0%, var(--accent) 50%, var(--brand) 100%);
-      background-size: 200% auto;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: shine 4s linear infinite;
-      margin-bottom: 4px;
-    }
-
-    .stat-label {
-      font-size: 12px;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 600;
-    }
-
-    .hero-visual {
-      background: rgba(124, 92, 255, 0.1);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 400px;
-      position: relative;
-      overflow: hidden;
-      animation: fadeInUp 0.6s ease-out 0.3s backwards;
-    }
-
-    .hero-visual::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(124, 92, 255, 0.3), transparent 70%);
-      animation: rotate 20s linear infinite;
-    }
-
-    @keyframes rotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    .hero-visual-content {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-    }
-
-    .hero-icon {
-      font-size: 80px;
-      margin-bottom: 16px;
-    }
-
-    .hero-visual-text {
-      font-size: 13px;
-      color: var(--text-muted);
-      line-height: 1.8;
-    }
-
-    /* SECTION STYLES */
-    section {
-      margin-bottom: 100px;
-      animation: fadeInUp 0.6s ease-out;
-      scroll-margin-top: 90px;
-    }
-
-    .section-header {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 24px;
-      margin-bottom: 40px;
-    }
-
-    h2 {
-      font-size: 36px;
-      margin: 0;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-    }
-
-    .hint {
-      color: var(--text-muted);
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 600;
-    }
-
-    /* PROJECTS SECTION */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 28px;
-    }
-
-    .project-card {
-      background: rgba(15, 20, 38, 0.6);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      backdrop-filter: blur(10px);
-      transition: var(--transition);
-      display: flex;
-      flex-direction: column;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .project-card:hover {
-      border-color: var(--brand);
-      background: rgba(15, 20, 38, 0.8);
-      transform: translateY(-8px);
-      box-shadow: var(--shadow);
-    }
-
-    .project-video {
-      width: 100%;
-      height: 240px;
-      background: linear-gradient(135deg, rgba(124, 92, 255, 0.1), rgba(34, 197, 94, 0.1));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .project-video video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .project-placeholder {
-      width: 100%;
-      height: 100%;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 12px;
-      color: var(--text-muted);
-      font-size: 13px;
-      padding: 20px;
-      text-align: center;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    .project-video.video-error video {
-      display: none;
-    }
-
-    .project-video.video-error .project-placeholder {
-      display: flex;
-    }
-
-    .project-icon {
-      font-size: 40px;
-      opacity: 0.5;
-    }
-
-    .project-content {
-      padding: 28px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .project-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: var(--accent);
-      margin-bottom: 12px;
-    }
-
-    .project-title {
-      font-size: 22px;
-      font-weight: 800;
-      margin: 0 0 12px 0;
-      color: var(--text);
-    }
-
-    .project-description {
-      font-size: 14px;
-      color: var(--text-muted);
-      margin: 0 0 16px 0;
-      line-height: 1.7;
-      flex: 1;
-    }
-
-    .tech-stack {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 18px;
-    }
-
-    .tech-badge {
-      font-size: 11px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: rgba(124, 92, 255, 0.15);
-      color: var(--brand-light);
-      border: 1px solid rgba(124, 92, 255, 0.3);
-      font-weight: 500;
-      transition: var(--transition);
-    }
-
-    .tech-badge:hover {
-      background: rgba(124, 92, 255, 0.25);
-      border-color: var(--brand);
-    }
-
-    .project-links {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .link-btn {
-      font-size: 12px;
-      padding: 8px 14px;
-      border-radius: 6px;
-      background: rgba(124, 92, 255, 0.15);
-      color: var(--brand-light);
-      border: 1px solid rgba(124, 92, 255, 0.3);
-      font-weight: 600;
-      cursor: pointer;
-      transition: var(--transition);
-      flex: 1;
-      text-align: center;
-    }
-
-    .link-btn:hover {
-      background: var(--brand);
-      color: white;
-      border-color: var(--brand);
-    }
-
-    /* SKILLS SECTION */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-    }
-
-    .skill-category {
-      background: rgba(15, 20, 38, 0.6);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px;
-      backdrop-filter: blur(10px);
-      transition: var(--transition);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .skill-category:hover {
-      border-color: var(--brand);
-      background: rgba(15, 20, 38, 0.8);
-      transform: translateY(-4px);
-    }
-
-    .skill-category h3 {
-      font-size: 18px;
-      margin: 0 0 14px 0;
-      background: linear-gradient(135deg, var(--brand), var(--accent));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      font-weight: 800;
-    }
-
-    .skill-list {
-      font-size: 14px;
-      color: var(--text-muted);
-      line-height: 1.8;
-    }
-
-    .skill-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 8px;
-    }
-
-    .skill-dot {
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background: var(--brand);
-    }
-
-    /* ABOUT SECTION */
-    .about-card {
-      background: linear-gradient(135deg, rgba(124, 92, 255, 0.1), rgba(34, 197, 94, 0.05));
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 40px;
-      backdrop-filter: blur(10px);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .about-text {
-      font-size: 16px;
-      line-height: 1.9;
-      color: var(--text-muted);
-      margin: 0;
-    }
-
-    .about-text strong {
-      color: var(--brand-light);
-      font-weight: 700;
-    }
-
-    /* CONTACT SECTION */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-    }
-
-    @media (max-width: 768px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .contact-info {
-      background: rgba(15, 20, 38, 0.6);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 36px;
-      backdrop-filter: blur(10px);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .contact-info h3 {
-      font-size: 18px;
-      margin: 0 0 16px 0;
-      color: var(--text);
-      font-weight: 800;
-    }
-
-    .contact-text {
-      font-size: 14px;
-      color: var(--text-muted);
-      margin-bottom: 20px;
-      line-height: 1.8;
-    }
-
-    .contact-buttons {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    @media (max-width: 480px) {
-      .contact-buttons {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .form-group {
-      margin-bottom: 16px;
-    }
-
-    .form-label {
-      display: block;
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 12px 14px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      color: var(--text);
-      font-family: inherit;
-      font-size: 14px;
-      transition: var(--transition);
-    }
-
-    input:focus, textarea:focus {
-      outline: none;
-      border-color: var(--brand);
       background: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 0 20px rgba(124, 92, 255, 0.15);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: .38rem .62rem;
+      cursor: pointer;
     }
+    .top-btn:hover { border-color: var(--accent); background: rgba(255, 107, 61, 0.18); }
 
-    textarea {
-      resize: vertical;
-      min-height: 120px;
+    main { padding: 1.4rem 0 3rem; }
+    section { margin-top: 2.3rem; scroll-margin-top: 90px; }
+    .head { margin-bottom: .92rem; }
+    .head h2 { font-size: clamp(1.35rem, 2.4vw, 1.95rem); line-height: 1.2; letter-spacing: -.01em; }
+    .head p { color: var(--muted); font-size: .9rem; max-width: 72ch; margin-top: .3rem; }
+
+    .hero {
+      display: grid; grid-template-columns: 1.06fr .94fr; gap: .95rem;
     }
-
-    /* FOOTER */
-    footer {
-      padding: 40px 0;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 13px;
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--bg-soft);
+      box-shadow: var(--shadow);
+      overflow: hidden;
     }
-
-    .footer-content {
-      margin-bottom: 16px;
-    }
-
-    .divider {
-      height: 1px;
-      background: var(--border);
-      margin: 30px 0;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .navbar-inner {
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .nav-links {
-        width: 100%;
-        justify-content: center;
-      }
-
-      .hero {
-        padding: 60px 0 60px;
-        margin-top: 120px;
-      }
-
-      h1 {
-        font-size: 36px;
-      }
-
-      section {
-        margin-bottom: 60px;
-      }
-
-      h2 {
-        font-size: 28px;
-      }
-
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* SCROLLBAR */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: transparent;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: rgba(124, 92, 255, 0.3);
+    .hero-main { padding: 1.2rem; display: grid; gap: .72rem; }
+    .hero-badge {
+      width: fit-content;
+      font: 600 .65rem "JetBrains Mono", monospace;
+      text-transform: uppercase;
+      color: var(--accent-2);
+      background: rgba(23, 199, 165, 0.14);
+      border: 1px solid rgba(23, 199, 165, 0.52);
       border-radius: 999px;
+      padding: .28rem .54rem;
+    }
+    h1 { font-size: clamp(1.95rem, 3.7vw, 3.25rem); line-height: 1.12; max-width: 17ch; }
+    h1 span {
+      background: linear-gradient(110deg, var(--text), var(--accent), var(--accent-2));
+      background-size: 220% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: shine 5.2s linear infinite;
+    }
+    @keyframes shine { to { background-position: 220% center; } }
+    .hero-main p { color: var(--muted); font-size: .95rem; max-width: 58ch; }
+    .hero-actions { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .2rem; }
+    .btn {
+      border-radius: 10px; border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text); font-size: .8rem; font-weight: 700;
+      padding: .58rem .76rem;
+    }
+    .btn:hover { border-color: var(--accent); background: rgba(255, 107, 61, 0.2); }
+    .btn.primary { background: linear-gradient(120deg, var(--accent), #ff8b64); border-color: var(--accent); color: #fff; }
+
+    .hero-kpis { display: grid; grid-template-columns: repeat(2, 1fr); gap: .5rem; margin-top: .16rem; }
+    .kpi {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: .54rem;
+      background: rgba(255, 255, 255, 0.08);
+    }
+    .kpi strong { display: block; color: var(--accent-2); font-size: 1.02rem; line-height: 1.25; }
+    .kpi span { color: var(--muted); font: .66rem "JetBrains Mono", monospace; text-transform: uppercase; }
+
+    .hero-side { padding: .95rem; display: grid; gap: .58rem; }
+    .hero-side h3 { color: var(--muted); font: 700 .78rem "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: .05em; }
+    .signal {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: .62rem;
+      background: rgba(255, 255, 255, 0.08);
+    }
+    .signal b { display: block; font-size: .9rem; margin-bottom: .14rem; }
+    .signal small { color: var(--muted); font-size: .77rem; }
+
+    .projects {
+      display: grid; grid-template-columns: repeat(12, 1fr); gap: .75rem;
+    }
+    .project-card {
+      grid-column: span 6;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      display: flex; flex-direction: column;
+      overflow: hidden;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+    .project-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+    .project-card.featured { grid-column: span 12; display: grid; grid-template-columns: 1fr 1fr; }
+    .project-media {
+      min-height: 190px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(145deg, rgba(255, 107, 61, 0.24), rgba(23, 199, 165, 0.2));
+      position: relative;
+    }
+    .project-card.featured .project-media { border-bottom: 0; border-right: 1px solid var(--line); min-height: 220px; }
+    .project-media video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .project-fallback {
+      position: absolute; inset: 0;
+      display: grid; place-items: center;
+      font: 700 .75rem "JetBrains Mono", monospace;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      background: linear-gradient(145deg, rgba(15, 31, 47, 0.92), rgba(16, 40, 62, 0.92));
+    }
+    .project-content { padding: .88rem; display: grid; gap: .48rem; }
+    .project-meta { display: flex; justify-content: space-between; gap: .5rem; flex-wrap: wrap; }
+    .pill {
+      font: 600 .65rem "JetBrains Mono", monospace; text-transform: uppercase;
+      border-radius: 999px; padding: .2rem .48rem;
+      border: 1px solid rgba(23, 199, 165, 0.5);
+      background: rgba(23, 199, 165, 0.14);
+      color: var(--accent-2);
+    }
+    .pill.metric {
+      border-color: rgba(255, 107, 61, 0.45);
+      background: rgba(255, 107, 61, 0.16);
+      color: #ff9b7d;
+    }
+    .project-title { font-size: 1.05rem; line-height: 1.3; }
+    .project-desc { color: var(--muted); font-size: .84rem; }
+    .project-list { display: grid; gap: .28rem; }
+    .project-list li {
+      list-style: none; display: flex; gap: .44rem; color: var(--muted); font-size: .78rem;
+    }
+    .project-list li::before {
+      content: ""; width: 6px; height: 6px; border-radius: 999px;
+      background: linear-gradient(120deg, var(--accent), var(--accent-2));
+      margin-top: .42rem; flex: 0 0 auto;
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: .35rem; }
+    .chip {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: .2rem .43rem;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.08);
+      font: .66rem "JetBrains Mono", monospace;
+    }
+    .project-actions { display: flex; gap: .38rem; flex-wrap: wrap; }
+    .mini {
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      padding: .38rem .52rem;
+      font-size: .73rem;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+    }
+    .mini:hover { border-color: var(--accent); background: rgba(255, 107, 61, 0.2); }
+    .mini[aria-disabled="true"] { opacity: .7; pointer-events: none; }
+
+    .stack-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: .6rem; }
+    .stack-card {
+      border: 1px solid var(--line); border-radius: 14px; background: var(--bg-soft);
+      box-shadow: var(--shadow); padding: .74rem; display: grid; gap: .26rem;
+    }
+    .stack-card h4 { font-size: .9rem; }
+    .stack-card p { color: var(--muted); font-size: .79rem; }
+
+    .proof-layout { display: grid; grid-template-columns: .86fr 1.14fr; gap: .7rem; }
+    .box {
+      border: 1px solid var(--line); border-radius: 16px; background: var(--bg-soft);
+      box-shadow: var(--shadow); padding: .78rem;
+    }
+    .box h3 { font-size: .92rem; margin-bottom: .48rem; }
+    .live-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: .45rem; }
+    .live {
+      border: 1px solid var(--line); border-radius: 11px;
+      background: rgba(255, 255, 255, 0.08); padding: .54rem;
+    }
+    .live strong { display: block; color: var(--accent-2); font-size: .98rem; }
+    .live span { color: var(--muted); font: .65rem "JetBrains Mono", monospace; text-transform: uppercase; }
+
+    .repo-list { display: grid; gap: .45rem; }
+    .repo {
+      border: 1px solid var(--line); border-radius: 11px; background: rgba(255, 255, 255, 0.08);
+      padding: .56rem;
+    }
+    .repo-top { display: flex; justify-content: space-between; gap: .4rem; }
+    .repo-top b { font-size: .85rem; }
+    .repo-top i { font-style: normal; font: .64rem "JetBrains Mono", monospace; color: #ff9b7d; }
+    .repo p { color: var(--muted); font-size: .76rem; margin: .2rem 0 .34rem; }
+    .repo-meta { display: flex; gap: .54rem; flex-wrap: wrap; color: var(--muted); font: .64rem "JetBrains Mono", monospace; }
+    .loading {
+      border: 1px dashed var(--line); border-radius: 10px; padding: .7rem; text-align: center;
+      color: var(--muted); font: .74rem "JetBrains Mono", monospace; background: rgba(255, 255, 255, 0.08);
     }
 
-    ::-webkit-scrollbar-thumb:hover {
-      background: rgba(124, 92, 255, 0.6);
+    .insights { display: grid; grid-template-columns: repeat(3, 1fr); gap: .58rem; }
+    .insight {
+      border: 1px solid var(--line); border-radius: 14px; background: var(--bg-soft);
+      box-shadow: var(--shadow); padding: .74rem; display: grid; gap: .34rem;
+    }
+    .insight .tag {
+      width: fit-content; border: 1px solid rgba(255, 107, 61, 0.45); border-radius: 999px;
+      color: #ff9b7d; background: rgba(255, 107, 61, 0.16);
+      padding: .17rem .42rem; font: .62rem "JetBrains Mono", monospace; text-transform: uppercase;
+    }
+    .insight b { font-size: .9rem; line-height: 1.3; }
+    .insight p { color: var(--muted); font-size: .79rem; }
+    .insight small { color: var(--muted); font-size: .74rem; }
+
+    .contact {
+      border: 1px solid var(--line); border-radius: 20px;
+      background: linear-gradient(135deg, rgba(23, 199, 165, 0.18), rgba(255, 107, 61, 0.16), var(--bg-soft));
+      box-shadow: var(--shadow);
+      padding: .95rem; display: grid; gap: .5rem;
+    }
+    .contact h2 { font-size: clamp(1.24rem, 2.25vw, 1.8rem); line-height: 1.2; }
+    .contact p { color: var(--muted); font-size: .9rem; max-width: 70ch; }
+    .contact-actions { display: flex; gap: .4rem; flex-wrap: wrap; }
+    .contact-note { color: var(--muted); font-size: .78rem; }
+
+    footer {
+      margin-top: 2rem; border-top: 1px solid var(--line); padding-top: .86rem;
+      color: var(--muted); font-size: .76rem;
+      display: flex; justify-content: space-between; gap: .5rem; flex-wrap: wrap;
     }
 
-    /* WOW-FACTOR UPGRADES */
-    body {
-      cursor: none;
+    .reveal {
+      opacity: 0; transform: translateY(14px); transition: opacity .45s ease, transform .45s ease;
     }
-    a, button, input, textarea, .project-card, .skill-category, .nav-link, .link-btn {
-      cursor: none !important;
+    .reveal.show { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 980px) {
+      .hero { grid-template-columns: 1fr; }
+      .project-card, .project-card.featured { grid-column: span 12; display: flex; }
+      .project-card.featured .project-media { border-right: 0; border-bottom: 1px solid var(--line); }
+      .stack-grid, .proof-layout, .insights { grid-template-columns: 1fr 1fr; }
     }
-    .custom-cursor {
-      position: fixed;
-      top: 0; left: 0;
-      width: 8px; height: 8px;
-      background: var(--brand-light);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 9999;
-      transform: translate(-50%, -50%);
-      transition: width 0.2s, height 0.2s, background 0.2s;
-    }
-    .cursor-ring {
-      position: fixed;
-      top: 0; left: 0;
-      width: 32px; height: 32px;
-      border: 1px solid var(--accent);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 9998;
-      transform: translate(-50%, -50%);
-      transition: width 0.2s, height 0.2s, border-color 0.2s, top 0.1s ease-out, left 0.1s ease-out;
-    }
-    .custom-cursor.hover {
-      width: 12px; height: 12px;
-      background: var(--accent);
-    }
-    .cursor-ring.hover {
-      width: 48px; height: 48px;
-      border-color: var(--brand-light);
-      background: rgba(124, 92, 255, 0.1);
-    }
-    .mouse-glow {
-      position: fixed;
-      top: 0; left: 0;
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(124,92,255,0.06) 0%, transparent 60%);
-      border-radius: 50%;
-      pointer-events: none;
-      transform: translate(-50%, -50%);
-      z-index: -1;
-      mix-blend-mode: screen;
-      transition: top 0.1s ease-out, left 0.1s ease-out;
-    }
-    #tsparticles {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: -2;
-      pointer-events: none;
+    @media (max-width: 760px) {
+      .stack-grid, .proof-layout, .insights, .live-stats, .hero-kpis { grid-template-columns: 1fr; }
+      footer { flex-direction: column; }
     }
   </style>
 </head>
 <body>
-  <!-- EFEITOS DE FUNDO E MOUSE -->
-  <div id="tsparticles"></div>
-  <div class="mouse-glow" id="mouse-glow"></div>
-  <div class="custom-cursor" id="custom-cursor"></div>
-  <div class="cursor-ring" id="cursor-ring"></div>
-
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="navbar-inner">
-      <div class="logo">
-        <span class="dot"></span>
-        <span>Samuel Nikolas</span>
-      </div>
-      <div class="nav-links">
-        <a href="#projetos" class="nav-link">Projetos</a>
-        <a href="#skills" class="nav-link">Stack</a>
-        <a href="#sobre" class="nav-link">Sobre</a>
-        <a href="#contato" class="nav-link">Contato</a>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <header id="header">
+    <div class="wrap top">
+      <a href="#top" class="brand"><span></span><span>SAMUEL NIKOLAS</span></a>
+      <nav>
+        <a class="nav-link" href="#projects" data-i18n="navProjects">Projetos</a>
+        <a class="nav-link" href="#stack" data-i18n="navStack">Stack</a>
+        <a class="nav-link" href="#proof" data-i18n="navProof">Provas</a>
+        <a class="nav-link" href="#insights" data-i18n="navInsights">Conteúdo</a>
+        <a class="nav-link" href="#contact" data-i18n="navContact">Contato</a>
+      </nav>
+      <div class="top-actions">
+        <button id="langBtn" class="top-btn" type="button">EN</button>
+        <button id="themeBtn" class="top-btn" type="button">Light</button>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <div>
-          <h1>Backend & Full Stack Developer</h1>
-          <p class="subtitle" style="min-height: 60px;">
-            Especializado em <span id="typed" style="color: var(--brand-light); font-weight: 600;"></span><br/>
-            Entrego sistemas robustos, bem documentados e prontos para produção.
-          </p>
-          <div class="cta-group">
-            <a href="#contato" class="btn btn-primary">Entrar em contato →</a>
-            <a href="https://github.com/samuca2k18" target="_blank" rel="noopener" class="btn btn-secondary">GitHub →</a>
-          </div>
-
-          <div class="stats">
-            <div class="stat-card">
-              <div class="stat-number">5+</div>
-              <div class="stat-label">Projetos</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">8+</div>
-              <div class="stat-label">Tecnologias</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">100%</div>
-              <div class="stat-label">Full Stack Delivery</div>
-            </div>
-          </div>
+  <main id="top" class="wrap">
+    <section class="hero reveal">
+      <article class="panel hero-main">
+        <span class="hero-badge" data-i18n="heroBadge">Disponível para remoto e híbrido</span>
+        <h1><span data-i18n="heroTitle">Backend forte. Produto real. Entrega em produção.</span></h1>
+        <p data-i18n="heroText">Desenvolvedor Full Stack com foco em Java/Spring Boot e Python/FastAPI, unindo React/TypeScript e DevOps para construir soluções confiáveis em cloud.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects" data-i18n="heroProjectsBtn">Ver projetos</a>
+          <a class="btn" href="https://github.com/samuca2k18" target="_blank" rel="noopener" data-i18n="heroGithubBtn">Abrir GitHub</a>
+          <a class="btn" href="assets/Samuel_Nikolas_Resume_EN.pdf" target="_blank" rel="noopener" data-i18n="heroResumeBtn">Baixar CV (EN)</a>
         </div>
+        <div class="hero-kpis" id="heroKpis"></div>
+      </article>
+      <aside class="panel hero-side" id="heroSignals"></aside>
+    </section>
 
-        <div class="hero-visual" data-tilt data-tilt-max="5" data-tilt-speed="400">
-          <div class="hero-visual-content">
-            <div class="hero-icon" style="color: var(--accent);"><i class="ph-duotone ph-terminal-window"></i></div>
-            <div class="hero-visual-text">
-              Backend robusto • Frontend moderno • Deploy completo
-            </div>
-          </div>
-        </div>
+    <section id="projects" class="reveal">
+      <div class="head">
+        <h2 data-i18n="projectsTitle">Projetos em Produção</h2>
+        <p data-i18n="projectsSubtitle">Baseado no seu currículo e GitHub: foco nos projetos com maior impacto de arquitetura, negócio e entrega.</p>
       </div>
-    </div>
-  </section>
+      <div class="projects" id="projectsMount"></div>
+    </section>
 
-  <!-- PROJECTS SECTION -->
-  <section id="projetos">
-    <div class="container">
-      <div class="section-header">
-        <h2>Projetos Principais</h2>
-        <span class="hint">trabalhos em destaque</span>
+    <section id="stack" class="reveal">
+      <div class="head">
+        <h2 data-i18n="stackTitle">Stack aplicado no mundo real</h2>
+        <p data-i18n="stackSubtitle">Tecnologias usadas em produção para backend robusto, produto web/mobile e automação de infraestrutura.</p>
       </div>
+      <div class="stack-grid" id="stackMount"></div>
+    </section>
 
-      <div class="projects-grid">
-        <!-- MARKET ALBION -->
-        <div class="project-card" data-aos="fade-up" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.2">
-          <div class="project-video">
-            <video controls preload="metadata" onerror="this.parentElement.classList.add('video-error')">
-              <source src="assets/market_albion.mp4" type="video/mp4">
-            </video>
-            <div class="project-placeholder">
-              <div class="project-icon"><i class="ph-duotone ph-chart-line-up"></i></div>
-              <span>Preview do Market Albion — veja no link ao lado</span>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-badge">💼 Em Produção</div>
-            <h3 class="project-title">Market Albion</h3>
-            <p class="project-description">
-              Dashboard inteligente de monitoramento de preços do Albion Online. Busca avançada, filtros por cidade/qualidade, histórico com gráficos e sistema de autenticação completo.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-badge">React</span>
-              <span class="tech-badge">TypeScript</span>
-              <span class="tech-badge">Tailwind</span>
-              <span class="tech-badge">TanStack Query</span>
-              <span class="tech-badge">Recharts</span>
-            </div>
-            <div class="project-links">
-              <a href="https://www.marketalbionbr.com.br" target="_blank" rel="noopener" class="link-btn">Site →</a>
-              <a href="https://github.com/samuca2k18/Front_Market_Albion" target="_blank" rel="noopener" class="link-btn">GitHub →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- SOUL SURF -->
-        <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.2">
-          <div class="project-video">
-            <video controls preload="metadata" onerror="this.parentElement.classList.add('video-error')">
-              <source src="assets/soul_surf.mp4" type="video/mp4">
-            </video>
-            <div class="project-placeholder">
-              <div class="project-icon"><i class="ph-duotone ph-waves"></i></div>
-              <span>Preview do Soul Surf — veja no link ao lado</span>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-badge">🏄 Full Stack</div>
-            <h3 class="project-title">Soul Surf</h3>
-            <p class="project-description">
-              Rede social para surfistas com feed, comentários, menções em tempo real e chat via WebSocket. Backend robusto em Spring Boot + Frontend React completo.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-badge">Java 17</span>
-              <span class="tech-badge">Spring Boot</span>
-              <span class="tech-badge">WebSocket</span>
-              <span class="tech-badge">PostgreSQL</span>
-              <span class="tech-badge">React + TS</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/valentimdev/Soul_Surf_PA2" target="_blank" rel="noopener" class="link-btn">GitHub →</a>
-              <a href="https://soul-surf-pa-2.vercel.app" target="_blank" rel="noopener" class="link-btn">Preview →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- PIANO PRINCESS -->
-        <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.2">
-          <div class="project-video">
-            <video controls preload="metadata" onerror="this.parentElement.classList.add('video-error')">
-              <source src="assets/piano_princess.mp4" type="video/mp4">
-            </video>
-            <div class="project-placeholder">
-              <div class="project-icon"><i class="ph-duotone ph-music-notes"></i></div>
-              <span>Preview do Piano Princess — veja no GitHub</span>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-badge">🎹 Mobile</div>
-            <h3 class="project-title">Piano Princess</h3>
-            <p class="project-description">
-              App educacional para ensino de piano. Aprendizado progressivo, interface encantada e interação com teclado em tempo real via áudio de baixa latência.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-badge">Flutter</span>
-              <span class="tech-badge">Firebase Auth</span>
-              <span class="tech-badge">Firestore</span>
-              <span class="tech-badge">Gamificação</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/samuca2k18/Piano-Princess" target="_blank" rel="noopener" class="link-btn">GitHub →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- MARKET ALBION BACKEND -->
-        <div class="project-card" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.2">
-          <div class="project-video">
-            <div class="project-placeholder">
-              <div class="project-icon"><i class="ph-duotone ph-gear"></i></div>
-              <span>Market Albion Backend — API REST &amp; WebScraping</span>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-badge">🐍 Backend</div>
-            <h3 class="project-title">Market Albion Backend</h3>
-            <p class="project-description">
-              API robusta com webscraping automático para coleta de preços do Albion Online. Alimenta o dashboard de monitoramento com dados em tempo real, processamento assíncrono e integração com Supabase.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-badge">Python</span>
-              <span class="tech-badge">FastAPI</span>
-              <span class="tech-badge">PostgreSQL</span>
-              <span class="tech-badge">Supabase</span>
-              <span class="tech-badge">WebScraping</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/samuca2k18/Market_Albion_Online" target="_blank" rel="noopener" class="link-btn">GitHub →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- AISSIS BACKEND -->
-        <div class="project-card" data-aos="fade-up" data-aos-delay="400" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.2">
-          <div class="project-video">
-            <div class="project-placeholder">
-              <div class="project-icon"><i class="ph-duotone ph-robot"></i></div>
-              <span>Aissis Backend — Plataforma de IA</span>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-badge">🐍 Backend</div>
-            <h3 class="project-title">Aissis Backend</h3>
-            <p class="project-description">
-              Backend da plataforma AISSIS. API assíncrona de alto desempenho, arquitetura limpa e integração com serviços de inteligência artificial.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-badge">Python</span>
-              <span class="tech-badge">FastAPI</span>
-              <span class="tech-badge">PostgreSQL</span>
-              <span class="tech-badge">Supabase</span>
-              <span class="tech-badge">IA/ML</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/samuca2k18/Aissis_back" target="_blank" rel="noopener" class="link-btn">GitHub →</a>
-            </div>
-          </div>
-        </div>
+    <section id="proof" class="reveal">
+      <div class="head">
+        <h2 data-i18n="proofTitle">Provas técnicas</h2>
+        <p data-i18n="proofSubtitle">Dados ao vivo da API do GitHub para manter o portfólio sempre confiável e atualizado.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- OPEN SOURCE SECTION -->
-  <section id="opensource" style="margin-top: 100px;">
-    <div class="container">
-      <div class="section-header" data-aos="fade-in">
-        <h2>Repositórios Open Source</h2>
-        <span class="hint">via api github</span>
+      <div class="proof-layout">
+        <article class="box">
+          <h3 data-i18n="proofStatsTitle">GitHub Live Stats</h3>
+          <div class="live-stats" id="liveStats"><div class="loading" data-i18n="loadingGithub">Carregando GitHub...</div></div>
+        </article>
+        <article class="box">
+          <h3 data-i18n="proofReposTitle">Repositórios recentes</h3>
+          <div class="repo-list" id="repoMount"><div class="loading" data-i18n="loadingRepos">Consultando repositórios...</div></div>
+        </article>
       </div>
-      <div id="github-repos" class="projects-grid">
-        <p style="color: var(--text-muted); text-align: center; width: 100%;">Trazendo as magias do GitHub...</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SKILLS SECTION -->
-  <section id="skills">
-    <div class="container">
-      <div class="section-header">
-        <h2>Stack Tecnológico</h2>
-        <span class="hint">ferramentas que domino</span>
+    <section id="insights" class="reveal">
+      <div class="head">
+        <h2 data-i18n="insightsTitle">Conteúdo para autoridade e SEO</h2>
+        <p data-i18n="insightsSubtitle">Sugestões de posts técnicos para reforçar posicionamento como backend/full-stack sênior de entrega real.</p>
       </div>
+      <div class="insights" id="insightsMount"></div>
+    </section>
 
-      <div class="skills-grid">
-        <div class="skill-category" data-aos="fade-up" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.1">
-          <h3>Backend</h3>
-          <div class="skill-list">
-            <div class="skill-item">
-              <span class="skill-dot"></span>
-              <span>Java 17+ & Spring Boot (REST APIs, Security, WebSocket)</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-dot"></span>
-              <span>Python & FastAPI (APIs assíncronas, Pydantic)</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-dot"></span>
-              <span>PostgreSQL, Cloud Firestore & Design de Banco de Dados</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-dot"></span>
-              <span>JWT, OAuth2 & Autenticação Segura</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-dot"></span>
-              <span>Padrões de Arquitetura (Clean, Domain-Driven)</span>
-            </div>
-          </div>
+    <section id="contact" class="reveal">
+      <article class="contact">
+        <h2 data-i18n="contactTitle">Vamos construir algo sólido juntos</h2>
+        <p data-i18n="contactSubtitle">Aberto para oportunidades backend/full-stack, produtos SaaS e desafios de arquitetura, performance e cloud.</p>
+        <div class="contact-actions">
+          <a class="mini" href="mailto:samucanikolas3@gmail.com?subject=Portfolio%20Contact" data-i18n="contactEmail">E-mail</a>
+          <a class="mini" href="https://wa.me/558596491948" target="_blank" rel="noopener" data-i18n="contactWhats">WhatsApp</a>
+          <a class="mini" href="https://www.linkedin.com/in/samuel-nikolas-600b78275/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="mini" href="https://github.com/samuca2k18" target="_blank" rel="noopener">GitHub</a>
         </div>
+        <span class="contact-note" data-i18n="contactNote">Fortaleza, CE - Brasil | Disponibilidade imediata para remoto/híbrido</span>
+      </article>
+    </section>
 
-        <div class="skill-category" data-aos="fade-up" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.1">
-          <h3>Frontend</h3>
-          <div class="skill-list">
-            <div class="skill-item">
-              <span class="skill-dot"></span>
-              <span>React 18+ & TypeScript Avançado</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-dot"></span>
-              <span>Tailwind CSS & Design Responsivo</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-dot"></span>
-              <span>TanStack Query & State Management</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-dot"></span>
-              <span>Recharts & Visualizações de Dados</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-dot"></span>
-              <span>i18n & Internacionalização</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-category" data-aos="fade-up" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.1">
-          <h3>Mobile</h3>
-          <div class="skill-list">
-            <div class="skill-item">
-              <span class="skill-dot"></span>
-              <span>Flutter & Firebase (Auth, Firestore, Hosting)</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-dot"></span>
-              <span>React Native & Expo</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-category" data-aos="fade-up" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.1">
-          <h3>DevOps &amp; Cloud</h3>
-          <div class="skill-list">
-            <div class="skill-item">
-              <span class="skill-dot"></span>
-              <span>AWS (EC2, S3, Lambda)</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-dot"></span>
-              <span>Supabase (Auth, Database, Storage)</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-dot"></span>
-              <span>Vercel & Deploy Automatizado</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-dot"></span>
-              <span>Docker & Containerização</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-dot"></span>
-              <span>GitHub Actions & CI/CD</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-dot"></span>
-              <span>Terraform & Ansible (IaC)</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-category" data-aos="fade-up" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.1">
-          <h3>Padrões de Arquitetura</h3>
-          <div class="skill-list">
-            <div class="skill-item">
-              <span class="skill-dot"></span>
-              <span>Clean Architecture & Domain-Driven Design</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-dot"></span>
-              <span>REST API Design & OpenAPI</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-dot"></span>
-              <span>Microsserviços & Comunicação Assíncrona</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-dot"></span>
-              <span>SOLID, Design Patterns & Code Review</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT SECTION -->
-  <section id="sobre">
-    <div class="container">
-      <div class="section-header">
-        <h2>Sobre</h2>
-        <span class="hint">quem sou eu</span>
-      </div>
-
-      <div class="about-card">
-        <p class="about-text">
-          Sou um desenvolvedor apaixonado por construir sistemas que são <strong>fáceis de manter</strong>, <strong>seguros</strong> e <strong>bem documentados</strong>.
-          
-          Meu foco principal é backend robusto, mas entrego produto completo quando necessário: API + UI + Deploy em produção.
-          
-          Em 2025-2026, expandi meu portfólio com novos projetos: <strong>Market Albion Backend</strong> (FastAPI + WebScraping + Supabase) e <strong>Aissis Backend</strong> (plataforma de IA), além de evoluir continuamente o <strong>Market Albion</strong> com novas funcionalidades em produção.
-          
-          Trabalho com metodologias ágeis, versionamento Git disciplinado e sempre busco melhorias contínuas no código e na arquitetura. 
-          
-          Possuo experiência tanto em startups quanto em projetos freelance, sempre com compromisso em entregar qualidade e aprender novas tecnologias.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT SECTION -->
-  <section id="contato">
-    <div class="container">
-      <div class="section-header">
-        <h2>Vamos Conversar?</h2>
-        <span class="hint">entre em contato</span>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-info" data-aos="fade-up" data-tilt data-tilt-max="2" data-tilt-glare="true" data-tilt-max-glare="0.1">
-          <h3>Informações de Contato</h3>
-          <p class="contact-text">
-            Estou disponível para oportunidades, parcerias e conversas sobre tecnologia. Respondo rapidamente!
-          </p>
-          <div class="contact-buttons">
-            <a href="https://wa.me/558596491948" target="_blank" rel="noopener" class="btn btn-primary">
-              WhatsApp →
-            </a>
-            <a href="mailto:samucanikolas@gmail.comsubject=Contato do Portfólio" class="btn btn-secondary">
-              E-mail
-            </a>
-            <a href="https://github.com/samuca2k18" target="_blank" rel="noopener" class="btn btn-secondary">
-              GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/samuel-nikolas-600b78275/" target="_blank" rel="noopener" class="btn btn-secondary">
-              LinkedIn
-            </a>
-          </div>
-        </div>
-
-        <div class="contact-info" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="2" data-tilt-glare="true" data-tilt-max-glare="0.1">
-          <h3>Envie uma Mensagem</h3>
-          <form onsubmit="handleSubmit(event)">
-            <div class="form-group">
-              <label for="name" class="form-label">Nome</label>
-              <input type="text" id="name" name="name" placeholder="Seu nome completo" required />
-            </div>
-            <div class="form-group">
-              <label for="message" class="form-label">Mensagem</label>
-              <textarea id="message" name="message" placeholder="Conte sobre seu projeto ou oportunidade..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar via WhatsApp →</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <div class="divider"></div>
-      <div class="footer-content">
-        © <span id="year"></span> Samuel Nikolas • Desenvolvedor Backend & Full Stack
-      </div>
-      <div class="hint">Hospedado em Vercel • Código aberto • Made with 💜</div>
-    </div>
-  </footer>
+    <footer>
+      <span>© <span id="year"></span> Samuel Nikolas</span>
+      <span data-i18n="footerText">Backend • Full Stack • DevOps • Vercel</span>
+    </footer>
+  </main>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    const GH_USER = "samuca2k18";
 
-    // Smooth scroll for anchor links (com offset da navbar fixa)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href !== '#') {
-          e.preventDefault();
-          const target = document.querySelector(href);
-          if (target) {
-            const navHeight = document.querySelector('.navbar').offsetHeight;
-            const targetPos = target.getBoundingClientRect().top + window.scrollY - navHeight;
-            window.scrollTo({ top: targetPos, behavior: 'smooth' });
-          }
-        }
-      });
-    });
-
-    // Form submission
-    function handleSubmit(event) {
-      event.preventDefault();
-      
-      const name = document.getElementById("name").value.trim();
-      const message = document.getElementById("message").value.trim();
-      
-      if (name && message) {
-        const text = encodeURIComponent(`Olá! Sou ${name}.\n\n${message}`);
-        const phone = "558596491948"; // MUDE PARA SEU NÚMERO
-        const url = `https://wa.me/${phone}?text=${text}`;
-        window.open(url, '_blank');
-        event.target.reset();
-      }
-    }
-  </script>
-  
-  <!-- Bibliotecas Modernas -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.5.0/tsparticles.bundle.min.js"></script>
-  
-  <!-- Inicialização e Integração Dinâmica -->
-  <script>
-    // 1. Iniciar AOS (Animate on Scroll)
-    AOS.init({
-      once: true,
-      offset: 50,
-      duration: 600
-    });
-
-    // 2. Iniciar Typed.js no Subtitulo
-    if (document.getElementById('typed')) {
-      new Typed('#typed', {
-        strings: ['Java e Spring Boot', 'Python e FastAPI', 'React e TypeScript', 'Full Stack Dev', 'Arquitetura Limpa'],
-        typeSpeed: 60,
-        backSpeed: 30,
-        loop: true,
-        showCursor: true,
-        cursorChar: '_'
-      });
-    }
-
-    // 3. Buscar e renderizar repositórios do GitHub dinamicamente
-    async function fetchGitHubRepos() {
-      const container = document.getElementById('github-repos');
-      if (!container) return;
-      
-      try {
-        const res = await fetch('https://api.github.com/users/samuca2k18/repos?sort=updated&per_page=100');
-        if (!res.ok) throw new Error("Erro na API");
-        const repos = await res.json();
-        
-        // Ignora os projetos já exibidos no highlight e forks
-        const ignore = ['Market_Albion_Online', 'Soul_Surf_PA2', 'Piano-Princess', 'Aissis_back', 'Front_Market_Albion', 'portifolio', 'samuca2k18'];
-        
-        const bestRepos = repos
-          .filter(r => !r.fork && !ignore.includes(r.name))
-          .sort((a, b) => b.stargazers_count - a.stargazers_count)
-          .slice(0, 6); // Pega os 6 melhores
-
-        if (bestRepos.length === 0) {
-           container.innerHTML = '<p style="color: var(--text-muted); text-align: center; width: 100%;">Nenhum repositório público adicional encontrado.</p>';
-           return;
-        }
-
-        container.innerHTML = ''; // Limpar o placeholder de loading
-
-        bestRepos.forEach((repo, i) => {
-          const delay = i * 100; // cascata de entrada
-          container.innerHTML += `
-            <a href="${repo.html_url}" target="_blank" rel="noopener" class="project-card dynamic-repo" data-aos="fade-up" data-aos-delay="${delay}" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.2" style="text-decoration: none; display: flex; flex-direction: column;">
-              <div class="project-content" style="flex: 1; padding: 24px;">
-                <div class="project-badge" style="margin-bottom: 8px;"><i class="ph-duotone ph-git-repository"></i> ${repo.language || 'Code'}</div>
-                <h3 class="project-title" style="font-size: 18px; margin-bottom: 8px;">${repo.name}</h3>
-                <p class="project-description" style="font-size: 13px; line-height: 1.5;">${repo.description || 'Repositório opensource do GitHub.'}</p>
-                <div class="tech-stack" style="margin-bottom: 0px; margin-top: 14px;">
-                  <span class="tech-badge"><i class="ph-fill ph-star" style="color: #fbbf24; margin-right: 4px;"></i> ${repo.stargazers_count}</span>
-                  <span class="tech-badge"><i class="ph-duotone ph-git-fork" style="margin-right: 4px;"></i> ${repo.forks_count}</span>
-                </div>
-              </div>
-            </a>
-          `;
-        });
-        
-        // Iniciar VanillaTilt para os cards recém gerados (a re-verificação precisa rodar dps do render)
-        setTimeout(() => {
-          const newCards = document.querySelectorAll('.dynamic-repo');
-          if (newCards.length > 0) {
-            VanillaTilt.init(newCards);
-          }
-        }, 100);
-        
-      } catch (err) {
-        console.error("Erro ao puxar github repos:", err);
-        container.innerHTML = '<p style="color: var(--text-muted); text-align: center; width: 100%;">Não foi possível conectar com o GitHub no momento.</p>';
-      }
-    }
-    
-    fetchGitHubRepos();
-
-    // 4. Lógica do Custom Cursor e Mouse Glow
-    const cursor = document.getElementById('custom-cursor');
-    const ring = document.getElementById('cursor-ring');
-    const glow = document.getElementById('mouse-glow');
-
-    document.addEventListener('mousemove', (e) => {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-      
-      ring.style.left = e.clientX + 'px';
-      ring.style.top = e.clientY + 'px';
-      
-      glow.style.left = e.clientX + 'px';
-      glow.style.top = e.clientY + 'px';
-    });
-
-    // Delegar hover states para interativos
-    document.addEventListener('mouseover', (e) => {
-      if(e.target.closest('a') || e.target.closest('button') || e.target.closest('input') || e.target.closest('textarea') || e.target.closest('.project-card') || e.target.closest('.skill-category') || e.target.closest('.nav-link')) {
-        cursor.classList.add('hover');
-        ring.classList.add('hover');
-      }
-    });
-    
-    document.addEventListener('mouseout', (e) => {
-      if(e.target.closest('a') || e.target.closest('button') || e.target.closest('input') || e.target.closest('textarea') || e.target.closest('.project-card') || e.target.closest('.skill-category') || e.target.closest('.nav-link')) {
-        cursor.classList.remove('hover');
-        ring.classList.remove('hover');
-      }
-    });
-
-    // 5. Instanciar TS Particles (Tech Constellation)
-    tsParticles.load("tsparticles", {
-      fpsLimit: 60,
-      particles: {
-        color: { value: ["#7c5cff", "#22c55e", "#4ade80"] },
-        links: {
-          color: "#a6b1d0",
-          distance: 130,
-          enable: true,
-          opacity: 0.15,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 0.8,
-          direction: "none",
-          random: true,
-          outModes: "bounce"
-        },
-        number: {
-          density: { enable: true, width: 800 },
-          value: 30
-        },
-        opacity: { value: 0.3 },
-        size: { value: { min: 1, max: 2.5 } }
+    const I18N = {
+      pt: {
+        navProjects: "Projetos",
+        navStack: "Stack",
+        navProof: "Provas",
+        navInsights: "Conteúdo",
+        navContact: "Contato",
+        heroBadge: "Disponível para remoto e híbrido",
+        heroTitle: "Backend forte. Produto real. Entrega em produção.",
+        heroText: "Desenvolvedor Full Stack com foco em Java/Spring Boot e Python/FastAPI, unindo React/TypeScript e DevOps para construir soluções confiáveis em cloud.",
+        heroProjectsBtn: "Ver projetos",
+        heroGithubBtn: "Abrir GitHub",
+        heroResumeBtn: "Baixar CV (EN)",
+        projectsTitle: "Projetos em Produção",
+        projectsSubtitle: "Baseado no seu currículo e GitHub: foco nos projetos com maior impacto de arquitetura, negócio e entrega.",
+        stackTitle: "Stack aplicado no mundo real",
+        stackSubtitle: "Tecnologias usadas em produção para backend robusto, produto web/mobile e automação de infraestrutura.",
+        proofTitle: "Provas técnicas",
+        proofSubtitle: "Dados ao vivo da API do GitHub para manter o portfólio sempre confiável e atualizado.",
+        proofStatsTitle: "GitHub Live Stats",
+        proofReposTitle: "Repositórios recentes",
+        loadingGithub: "Carregando GitHub...",
+        loadingRepos: "Consultando repositórios...",
+        insightsTitle: "Conteúdo para autoridade e SEO",
+        insightsSubtitle: "Sugestões de posts técnicos para reforçar posicionamento como backend/full-stack sênior de entrega real.",
+        contactTitle: "Vamos construir algo sólido juntos",
+        contactSubtitle: "Aberto para oportunidades backend/full-stack, produtos SaaS e desafios de arquitetura, performance e cloud.",
+        contactEmail: "E-mail",
+        contactWhats: "WhatsApp",
+        contactNote: "Fortaleza, CE - Brasil | Disponibilidade imediata para remoto/híbrido",
+        footerText: "Backend • Full Stack • DevOps • Vercel",
+        statusProduction: "Em Produção",
+        statusClient: "Cliente Real",
+        statusCase: "Case Study",
+        btnRepo: "Repositório",
+        btnDemo: "Demo",
+        btnPrivate: "Privado",
+        noDescription: "Sem descrição.",
+        githubLabels: { repos: "repositórios públicos", followers: "seguidores", stars: "estrelas totais", updated: "última atualização" },
+        githubError: "Não foi possível carregar o GitHub agora.",
+        kpis: [
+          { value: "5+", label: "Projetos em produção" },
+          { value: "100k+", label: "Itens indexados" },
+          { value: "CI/CD", label: "GitHub Actions + IaC" },
+          { value: "3 clouds", label: "Vercel, Oracle, Supabase" }
+        ],
+        signals: [
+          { title: "Albion Market API", text: "FastAPI, JWT seguro, cache multi-região e OpenAPI." },
+          { title: "Soul Surf", text: "Rede social full-stack com WebSocket e IaC (Terraform + Ansible)." },
+          { title: "IAssis CRM", text: "CRM + WhatsApp bot para cliente comercial real." },
+          { title: "Evolução atual", text: "Kubernetes, microsserviços e arquitetura orientada a eventos." }
+        ],
+        stacks: [
+          { title: "Backend", text: "Java 17+, Spring Boot, Spring Security, Python, FastAPI, SQLAlchemy, JWT, WebSocket/STOMP." },
+          { title: "Frontend", text: "React, TypeScript, Tailwind, TanStack Query, Recharts, i18next." },
+          { title: "DevOps", text: "Docker, Terraform, Ansible, GitHub Actions, Oracle Cloud, Vercel, AWS (base)." },
+          { title: "Arquitetura", text: "Clean Code, SOLID, Layered Architecture, testes com Jest/pytest e OpenAPI." }
+        ],
+        insights: [
+          { title: "Deploy do Soul Surf com Terraform + Ansible", text: "Mostrar provisionamento, automação e estratégia de rollback.", cta: "Rascunho pronto para publicar" },
+          { title: "JWT seguro com FastAPI + PBKDF2", text: "Fluxo de autenticação, hardening e verificação de e-mail em produção.", cta: "Rascunho auth flow + segurança" },
+          { title: "Dashboard Albion com TanStack Query", text: "Estratégia de cache e UX para dados de mercado em tempo real.", cta: "Rascunho performance + UX" }
+        ]
       },
-      interactivity: {
-        events: {
-          onHover: { enable: true, mode: "grab" },
-          onClick: { enable: true, mode: "push" }
+      en: {
+        navProjects: "Projects",
+        navStack: "Stack",
+        navProof: "Proof",
+        navInsights: "Content",
+        navContact: "Contact",
+        heroBadge: "Open to remote and hybrid roles",
+        heroTitle: "Strong backend. Real products. Production delivery.",
+        heroText: "Full Stack Developer focused on Java/Spring Boot and Python/FastAPI, combining React/TypeScript and DevOps for reliable cloud solutions.",
+        heroProjectsBtn: "View projects",
+        heroGithubBtn: "Open GitHub",
+        heroResumeBtn: "Download Resume (EN)",
+        projectsTitle: "Production Projects",
+        projectsSubtitle: "Based on your resume and GitHub, highlighting architecture, product impact, and delivery.",
+        stackTitle: "Stack used in real delivery",
+        stackSubtitle: "Technologies used in production for robust backend systems, product delivery, and infrastructure automation.",
+        proofTitle: "Technical proof",
+        proofSubtitle: "Live GitHub API data keeps the portfolio trustworthy and up to date.",
+        proofStatsTitle: "GitHub Live Stats",
+        proofReposTitle: "Recent repositories",
+        loadingGithub: "Loading GitHub...",
+        loadingRepos: "Checking repositories...",
+        insightsTitle: "Content for authority and SEO",
+        insightsSubtitle: "Technical post ideas to strengthen your backend/full-stack positioning with real delivery.",
+        contactTitle: "Let's build something solid together",
+        contactSubtitle: "Open to backend/full-stack opportunities, SaaS products, and architecture/performance/cloud challenges.",
+        contactEmail: "Email",
+        contactWhats: "WhatsApp",
+        contactNote: "Fortaleza, CE - Brazil | Immediate remote/hybrid availability",
+        footerText: "Backend • Full Stack • DevOps • Vercel",
+        statusProduction: "In Production",
+        statusClient: "Real Client",
+        statusCase: "Case Study",
+        btnRepo: "Repository",
+        btnDemo: "Live Demo",
+        btnPrivate: "Private",
+        noDescription: "No description.",
+        githubLabels: { repos: "public repositories", followers: "followers", stars: "total stars", updated: "last update" },
+        githubError: "GitHub could not be loaded right now.",
+        kpis: [
+          { value: "5+", label: "Production projects" },
+          { value: "100k+", label: "Indexed items" },
+          { value: "CI/CD", label: "GitHub Actions + IaC" },
+          { value: "3 clouds", label: "Vercel, Oracle, Supabase" }
+        ],
+        signals: [
+          { title: "Albion Market API", text: "FastAPI, secure JWT, multi-region cache, and OpenAPI docs." },
+          { title: "Soul Surf", text: "Full-stack social platform with WebSocket and IaC." },
+          { title: "IAssis CRM", text: "CRM + WhatsApp bot built for a real business client." },
+          { title: "Current focus", text: "Kubernetes, microservices, and event-driven architecture." }
+        ],
+        stacks: [
+          { title: "Backend", text: "Java 17+, Spring Boot, Spring Security, Python, FastAPI, SQLAlchemy, JWT, WebSocket/STOMP." },
+          { title: "Frontend", text: "React, TypeScript, Tailwind, TanStack Query, Recharts, i18next." },
+          { title: "DevOps", text: "Docker, Terraform, Ansible, GitHub Actions, Oracle Cloud, Vercel, AWS (basic)." },
+          { title: "Architecture", text: "Clean Code, SOLID, Layered Architecture, Jest/pytest testing, and OpenAPI docs." }
+        ],
+        insights: [
+          { title: "Deploying Soul Surf with Terraform + Ansible", text: "Show provisioning, automation, and rollback strategy.", cta: "Draft ready to publish" },
+          { title: "Secure JWT with FastAPI + PBKDF2", text: "Authentication flow, hardening, and production email verification.", cta: "Draft auth flow + security" },
+          { title: "Albion dashboard with TanStack Query", text: "Caching and UX strategy for real-time market data.", cta: "Draft performance + UX" }
+        ]
+      }
+    };
+
+    const PROJECTS = [
+      {
+        status: "statusProduction",
+        metric: "100k+ items",
+        video: "assets/market_albion.mp4",
+        repo: "https://github.com/samuca2k18/Market_Albion_Online",
+        demo: "https://albion-market-ai.online/",
+        tech: ["Python", "FastAPI", "PostgreSQL", "JWT", "Alembic", "OpenAPI"],
+        pt: {
+          title: "Albion Market API",
+          desc: "API profissional para monitorar preços do Albion Online em tempo real.",
+          points: ["JWT + PBKDF2 com verificação obrigatória de e-mail.", "Suporte multi-região com cache TTL.", "Alertas inteligentes por preço alvo e histórico."]
         },
-        modes: { 
-          grab: { distance: 180, links: { opacity: 0.35 } },
-          push: { quantity: 3 }
+        en: {
+          title: "Albion Market API",
+          desc: "Production API for real-time Albion Online market monitoring.",
+          points: ["JWT + PBKDF2 with mandatory email verification.", "Multi-region support with TTL cache.", "Smart alerts based on target price and history."]
+        }
+      },
+      {
+        status: "statusProduction",
+        metric: "i18n PT/EN",
+        video: "assets/market_albion.mp4",
+        repo: "https://github.com/samuca2k18/Front_Market_Albion",
+        demo: "https://front-market-albion.vercel.app/",
+        tech: ["React", "TypeScript", "Tailwind", "TanStack Query", "Recharts"],
+        pt: {
+          title: "Market Albion Dashboard",
+          desc: "Interface full-stack para análise de preços, lucro e histórico do mercado.",
+          points: ["Filtros avançados por cidade, qualidade e encantamento.", "Gráficos interativos para leitura rápida de oportunidades.", "Fluxo otimizado com cache e fetching estratégico."]
+        },
+        en: {
+          title: "Market Albion Dashboard",
+          desc: "Full-stack interface for pricing, profit, and market-history analysis.",
+          points: ["Advanced filters by city, quality, and enchantment.", "Interactive charts for quick opportunity reading.", "Optimized flow with strategic cache and fetching."]
+        }
+      },
+      {
+        status: "statusProduction",
+        metric: "WebSocket + IaC",
+        video: "assets/soul_surf.mp4",
+        repo: "https://github.com/valentimdev/Soul_Surf_PA2",
+        demo: "https://soul-surf-pa-2.vercel.app/",
+        tech: ["Java 17", "Spring Boot", "WebSocket/STOMP", "React", "Terraform", "Ansible", "Docker"],
+        pt: {
+          title: "Soul Surf Social Platform",
+          desc: "Rede social para surfistas com recursos em tempo real e infraestrutura automatizada.",
+          points: ["Feed público/privado, comentários e menções.", "Chat DM em tempo real com notificações.", "Deploy Oracle Cloud com Terraform + Ansible + Docker."]
+        },
+        en: {
+          title: "Soul Surf Social Platform",
+          desc: "Surfers social platform with real-time features and automated infrastructure.",
+          points: ["Public/private feed, comments, and mentions.", "Real-time DM chat with notifications.", "Oracle Cloud deploy with Terraform + Ansible + Docker."]
+        }
+      },
+      {
+        status: "statusClient",
+        metric: "CRM + WhatsApp",
+        video: "assets/piano_princess.mp4",
+        repo: "https://github.com/samuca2k18/Aissis_back",
+        demo: "",
+        tech: ["Python", "FastAPI", "PostgreSQL", "ReportLab", "Evolution API v2", "Docker"],
+        pt: {
+          title: "IAssis CRM + Bot",
+          desc: "CRM comercial com bot de WhatsApp para operação de cliente real.",
+          points: ["Pipeline de vendas com scoring de leads.", "Geração automática de PDFs comerciais.", "Bot conversacional com fluxo de estado."]
+        },
+        en: {
+          title: "IAssis CRM + Bot",
+          desc: "Commercial CRM with WhatsApp bot for a real client operation.",
+          points: ["Sales pipeline with lead scoring.", "Automatic generation of business PDFs.", "Conversational bot with state-machine flow."]
+        }
+      },
+      {
+        status: "statusCase",
+        metric: "iOS + Android",
+        video: "",
+        repo: "",
+        demo: "",
+        tech: ["React Native", "Expo", "Expo Router", "TypeScript", "Jest"],
+        pt: {
+          title: "Soul Surf Mobile",
+          desc: "Aplicativo cross-platform conectado ao backend da plataforma Soul Surf.",
+          points: ["Experiência mobile completa com autenticação JWT.", "Feed, comentários e chat com foco mobile-first.", "Navegação por arquivos e setup de build com Expo."]
+        },
+        en: {
+          title: "Soul Surf Mobile",
+          desc: "Cross-platform app connected to Soul Surf backend services.",
+          points: ["Complete mobile experience with JWT authentication.", "Feed, comments, and chat in mobile-first flow.", "File-based routing and Expo build setup."]
         }
       }
-    });
+    ];
+
+    const state = { lang: "pt", theme: "dark", github: null };
+    const el = (id) => document.getElementById(id);
+
+    function safe(value) {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+    }
+
+    function t(key) {
+      return I18N[state.lang][key] ?? I18N.pt[key] ?? key;
+    }
+
+    function applyStaticTexts() {
+      document.documentElement.lang = state.lang === "pt" ? "pt-BR" : "en";
+      document.querySelectorAll("[data-i18n]").forEach((node) => {
+        const key = node.getAttribute("data-i18n");
+        node.textContent = t(key);
+      });
+      el("langBtn").textContent = state.lang === "pt" ? "EN" : "PT";
+      el("themeBtn").textContent = state.theme === "dark" ? "Light" : "Dark";
+    }
+
+    function renderHeroPanels() {
+      el("heroKpis").innerHTML = t("kpis").map((item) => `
+        <article class="kpi"><strong>${safe(item.value)}</strong><span>${safe(item.label)}</span></article>
+      `).join("");
+
+      el("heroSignals").innerHTML = `
+        <h3>Production Snapshot</h3>
+        ${t("signals").map((s) => `<article class="signal"><b>${safe(s.title)}</b><small>${safe(s.text)}</small></article>`).join("")}
+      `;
+    }
+
+    function renderProjects() {
+      el("projectsMount").innerHTML = PROJECTS.map((project, index) => {
+        const copy = project[state.lang];
+        const classes = index < 2 ? "project-card featured" : "project-card";
+        const media = project.video
+          ? `<div class="project-media"><video src="${safe(project.video)}" autoplay muted loop playsinline preload="metadata"></video></div>`
+          : `<div class="project-media"><div class="project-fallback">${safe(copy.title)}</div></div>`;
+
+        const repoBtn = project.repo
+          ? `<a class="mini" href="${safe(project.repo)}" target="_blank" rel="noopener">${safe(t("btnRepo"))}</a>`
+          : `<span class="mini" aria-disabled="true">${safe(t("btnPrivate"))}</span>`;
+
+        const demoBtn = project.demo
+          ? `<a class="mini" href="${safe(project.demo)}" target="_blank" rel="noopener">${safe(t("btnDemo"))}</a>`
+          : "";
+
+        return `
+          <article class="${classes}">
+            ${media}
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="pill">${safe(t(project.status))}</span>
+                <span class="pill metric">${safe(project.metric)}</span>
+              </div>
+              <h3 class="project-title">${safe(copy.title)}</h3>
+              <p class="project-desc">${safe(copy.desc)}</p>
+              <ul class="project-list">${copy.points.map((point) => `<li>${safe(point)}</li>`).join("")}</ul>
+              <div class="chips">${project.tech.map((tech) => `<span class="chip">${safe(tech)}</span>`).join("")}</div>
+              <div class="project-actions">${repoBtn}${demoBtn}</div>
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    function renderStack() {
+      el("stackMount").innerHTML = t("stacks").map((item) => `
+        <article class="stack-card"><h4>${safe(item.title)}</h4><p>${safe(item.text)}</p></article>
+      `).join("");
+    }
+
+    function renderInsights() {
+      el("insightsMount").innerHTML = t("insights").map((insight) => `
+        <article class="insight">
+          <span class="tag">post</span>
+          <b>${safe(insight.title)}</b>
+          <p>${safe(insight.text)}</p>
+          <small>${safe(insight.cta)}</small>
+        </article>
+      `).join("");
+    }
+
+    function formatDate(iso) {
+      return new Date(iso).toLocaleDateString(state.lang === "pt" ? "pt-BR" : "en-US", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric"
+      });
+    }
+
+    function renderGithub() {
+      if (!state.github) {
+        el("liveStats").innerHTML = `<div class="loading">${safe(t("loadingGithub"))}</div>`;
+        el("repoMount").innerHTML = `<div class="loading">${safe(t("loadingRepos"))}</div>`;
+        return;
+      }
+
+      const labels = t("githubLabels");
+      const { profile, repos } = state.github;
+      const stars = repos.reduce((sum, repo) => sum + repo.stargazers_count, 0);
+      const updated = repos[0]?.updated_at || profile.updated_at;
+
+      el("liveStats").innerHTML = `
+        <article class="live"><strong>${safe(profile.public_repos)}</strong><span>${safe(labels.repos)}</span></article>
+        <article class="live"><strong>${safe(profile.followers)}</strong><span>${safe(labels.followers)}</span></article>
+        <article class="live"><strong>${safe(stars)}</strong><span>${safe(labels.stars)}</span></article>
+        <article class="live"><strong>${safe(formatDate(updated))}</strong><span>${safe(labels.updated)}</span></article>
+      `;
+
+      el("repoMount").innerHTML = repos.slice(0, 6).map((repo) => `
+        <a class="repo" href="${safe(repo.html_url)}" target="_blank" rel="noopener">
+          <div class="repo-top"><b>${safe(repo.name)}</b><i>${safe(repo.language || "Code")}</i></div>
+          <p>${safe(repo.description || t("noDescription"))}</p>
+          <div class="repo-meta"><span>★ ${safe(repo.stargazers_count)}</span><span>⑂ ${safe(repo.forks_count)}</span><span>${safe(formatDate(repo.updated_at))}</span></div>
+        </a>
+      `).join("");
+    }
+
+    async function loadGithub() {
+      try {
+        const [uRes, rRes] = await Promise.all([
+          fetch(`https://api.github.com/users/${GH_USER}`),
+          fetch(`https://api.github.com/users/${GH_USER}/repos?sort=updated&per_page=100`)
+        ]);
+
+        if (!uRes.ok || !rRes.ok) {
+          throw new Error("github_unavailable");
+        }
+
+        const profile = await uRes.json();
+        const repos = (await rRes.json())
+          .filter((repo) => !repo.fork)
+          .sort((a, b) => Date.parse(b.updated_at) - Date.parse(a.updated_at));
+
+        state.github = { profile, repos };
+        renderGithub();
+      } catch {
+        const msg = `<div class="loading">${safe(t("githubError"))}</div>`;
+        el("liveStats").innerHTML = msg;
+        el("repoMount").innerHTML = msg;
+      }
+    }
+
+    function setTheme(theme) {
+      state.theme = theme;
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem("portfolio-theme", theme);
+      el("themeBtn").textContent = theme === "dark" ? "Light" : "Dark";
+    }
+
+    function applyLanguage() {
+      applyStaticTexts();
+      renderHeroPanels();
+      renderProjects();
+      renderStack();
+      renderInsights();
+      renderGithub();
+    }
+
+    function initReveal() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll(".reveal").forEach((node) => observer.observe(node));
+    }
+
+    function init() {
+      el("year").textContent = String(new Date().getFullYear());
+
+      const savedLang = localStorage.getItem("portfolio-lang");
+      const browserLang = navigator.language.toLowerCase().startsWith("pt") ? "pt" : "en";
+      state.lang = savedLang === "pt" || savedLang === "en" ? savedLang : browserLang;
+
+      const savedTheme = localStorage.getItem("portfolio-theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      setTheme(savedTheme === "dark" || savedTheme === "light" ? savedTheme : (prefersDark ? "dark" : "light"));
+
+      applyLanguage();
+      loadGithub();
+      initReveal();
+
+      el("langBtn").addEventListener("click", () => {
+        state.lang = state.lang === "pt" ? "en" : "pt";
+        localStorage.setItem("portfolio-lang", state.lang);
+        applyLanguage();
+      });
+
+      el("themeBtn").addEventListener("click", () => {
+        setTheme(state.theme === "dark" ? "light" : "dark");
+      });
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 8) {
+          el("header").classList.add("scrolled");
+        } else {
+          el("header").classList.remove("scrolled");
+        }
+      }, { passive: true });
+    }
+
+    init();
   </script>
 </body>
 </html>
